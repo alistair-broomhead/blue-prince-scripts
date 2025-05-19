@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "High-School";
+  src:
+    local("fonts/high_school/High-School.ttf"),
+    url("fonts/high_school/High-School.ttf") format("opentype");
+}
+
+body {
+  --blueprint-bg-dark:  #1b3d7d;
+  --blueprint-bg-mid:   #214986;
+  --blueprint-bg-light: #24569B;
+  --blueprint-fg-dark:  #2261A4;
+  --outline-stroke-white: 
+        -1px -1px 0 white, 
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+  
+  background-color: var(--blueprint-bg-dark);
+  color: white;
+  margin: 0.5em;
+}
+div {
+  margin: 0.5em;
+}
+.impact {
+  color: var(--blueprint-fg-dark);
+  font-family: "High-School", impact;
+  text-shadow: var(--outline-stroke-white);
+  letter-spacing: 0.2rem;
+}
+header {
+  font-size: 4em;
+}
+h1 {
+  font-size: 3em;
+}
+fieldset {
+  border-radius: 2px;
+}
+button {
+  display: block;
+  margin-left: 50%;
+  margin-right: 50%;
+  background-color: var(--blueprint-bg-mid);
+  font-size: 2em;
+  border-radius: 2px;
+  padding: 0.3em;
+  outline: 1px solid white;
+}
+button:active {
+  background-color: var(--blueprint-bg-light);
+}
+fieldset {
+  background-color: var(--blueprint-bg-mid);
+}
+label:has(div) {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+label div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6em;
+}
+textarea {
+  font-family: sans-serif;
+  background-color: var(--blueprint-bg-light);
+  color: white;
+  border-radius: 2px;
+  padding: 0.3em;
+}
+#input:focus {
+  background-color: var(--blueprint-bg-mid);
+}
+#output {
+  resize: none;
+  background-color: var(--blueprint-bg-mid);
+}

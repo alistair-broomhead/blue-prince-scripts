@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <title>Core solver</title>
     <script src="coreNum.js"></script>
+    <link href="bp.css" rel="stylesheet">
   </head>
   <body>
-    <header>Core Solver</header>
+    <header class="impact">Core Solver</header>
     <div id="inputs">
+      <div>
       <fieldset id="algchooser">
-        <legend>Algorithm</legend>
+        <legend><h1 class="impact">Algorithm</h1></legend>
         <div>
             <input type="radio" name="alg_name"
                    id="naive" value="naive" checked>
@@ -26,16 +28,23 @@
             <label for="nofloat"> No Intermediate Floats </label>
         </div>
       </fieldset>
-      <label for="input">Input Words:</label>
-      <textarea id="input">
+      </div>
+      <label>
+        <div>Input Words:</div>
+        <textarea id="input" cols="25" rows="5">
 pigs sand mail date head
 clam peak heat joya well
 toad card will tape legs
 tree road maid slab rock
-hand vase safe clay toes</textarea>
-      <button id="submit" onClick="Core()">Core</button>
+hand vase safe clay toes</textarea
+      ></label>
+      <button class="impact" id="submit" onClick="Core()">Core</button>
     </div>
-    <label for="output">Output:</label>
-    <div id="output"></div>
+    <div>
+    <label>
+      <div>Output:</div>
+      <textarea id="output" cols="25" rows="3" readonly></textarea>
+    </label>
+    </div>
   </body>
 </html>
