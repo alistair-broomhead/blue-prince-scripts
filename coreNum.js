@@ -67,3 +67,18 @@ const core = {
     )
   },
 }
+
+// DOM manipulation starts here
+
+function Core() {
+  const algName = document.querySelector('input[name="alg_name"]:checked').value
+  const alg = algorithms[algName]
+  const input = document.getElementById("input").value
+  const text = input.split("\n").map(line => line.split(" "))
+  const result = text.map(line => core.fromWords(line, alg))
+  document.getElementById("output").innerText = result.join(" ")
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  Core()
+})

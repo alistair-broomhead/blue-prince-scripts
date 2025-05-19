@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Core solver</title>
+    <script src="coreNum.js"></script>
+  </head>
+  <body>
+    <header>Core Solver</header>
+    <div id="inputs">
+      <fieldset id="algchooser">
+        <legend>Algorithm</legend>
+        <div>
+            <input type="radio" name="alg_name"
+                   id="naive" value="naive" checked>
+            <label for="naive"> Naive </label>
+        </div>
+        <div>
+            <input type="radio" name="alg_name"
+                   id="safe" value="float_safe">
+            <label for="safe"> Float-safe </label>
+        </div>
+        <div>
+            <input type="radio" name="alg_name"
+                   id="nofloat" value="no_intermediate_floats">
+            <label for="nofloat"> No Intermediate Floats </label>
+        </div>
+      </fieldset>
+      <label for="input">Input Words:</label>
+      <textarea id="input">
+pigs sand mail date head
+clam peak heat joya well
+toad card will tape legs
+tree road maid slab rock
+hand vase safe clay toes</textarea>
+      <button id="submit" onClick="Core()">Core</button>
+    </div>
+    <label for="output">Output:</label>
+    <div id="output"></div>
+  </body>
+</html>
